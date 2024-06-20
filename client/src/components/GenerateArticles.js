@@ -87,7 +87,11 @@ const GenerateArticles = () => {
     }
     setLoading(true);
     try {
-      const response = await fetch(`download?url=${encodeURIComponent(url)}`);
+      const response = await fetch(
+        `https://ai-article-blog-clone.onrender.com/download?url=${encodeURIComponent(
+          url
+        )}`
+      );
       if (!response.ok) {
         throw new Error("Failed to fetch video data");
       }
