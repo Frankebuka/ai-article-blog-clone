@@ -221,7 +221,7 @@ const GenerateArticles = () => {
           <input
             type="url"
             name="link"
-            placeholder="Place Youtube Link..."
+            placeholder="Place Youtube Url..."
             className="form-control mb-4"
             value={url}
             onChange={(e) => setUrl(e.target.value)}
