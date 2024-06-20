@@ -328,7 +328,8 @@ app.use(express.static(path.join(__dirname, "/client/build")));
 
 const downloadAudio = async (url, output) => {
   return new Promise((resolve, reject) => {
-    const pythonExecutable = path.join(__dirname, "myenv", "bin", "python3");
+    // const pythonExecutable = path.join(__dirname, "myenv", "bin", "python3");
+    const pythonExecutable = "python3"; // Use system Python
     const scriptPath = path.join(__dirname, "download_audio.py");
     exec(
       `${pythonExecutable} ${scriptPath} ${url} ${output}`,
